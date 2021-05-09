@@ -25,10 +25,9 @@ class MainActivity : AppCompatActivity() {
             .setClientKey("SB-Mid-client-njnJpVe5frGCthE0")
             .setContext(applicationContext)
             .setTransactionFinishedCallback(TransactionFinishedCallback {
-                result ->
                 //logic for transaction result
             })
-            .setMerchantBaseUrl("http://10.0.2.2/payment_gateway/payment.php") //Isi dengan file PHP (fork di git) dan telah di hosting di web. Cantumkan URL disini
+            .setMerchantBaseUrl("http://10.0.2.2/payment_gateway/payment.php/") //Isi dengan file PHP (fork di git) dan telah di hosting di web. Cantumkan URL disini
             .enableLog(true)
             .setColorTheme(CustomColorTheme("#FFE51255", "#B61548", "#FFE51255"))
             .setLanguage("id")
