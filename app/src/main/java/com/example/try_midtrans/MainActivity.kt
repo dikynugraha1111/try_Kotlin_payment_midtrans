@@ -3,6 +3,7 @@ package com.example.try_midtrans
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.midtrans.sdk.corekit.callback.TransactionFinishedCallback
+import com.midtrans.sdk.corekit.core.MidtransSDK
 import com.midtrans.sdk.corekit.core.TransactionRequest
 import com.midtrans.sdk.corekit.core.themes.CustomColorTheme
 import com.midtrans.sdk.corekit.models.BillingAddress
@@ -47,6 +48,8 @@ class MainActivity : AppCompatActivity() {
             itemDetails.add(item)
             //Create Customer Detail Object
             uiKitsDetails(transactionRequest)
+            MidtransSDK.getInstance().transactionRequest = transactionRequest
+            MidtransSDK.getInstance().startPaymentUiFlow(this)
 
         }
     }
