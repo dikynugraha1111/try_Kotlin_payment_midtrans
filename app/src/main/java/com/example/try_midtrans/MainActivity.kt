@@ -22,12 +22,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         SdkUIFlowBuilder.init()
-            .setClientKey("SB-Mid-client-njnJpVe5frGCthE0")
+            .setClientKey(BuildConfig.CLIENT_KEY)
             .setContext(applicationContext)
             .setTransactionFinishedCallback(TransactionFinishedCallback {
                 //logic for transaction result
             })
-            .setMerchantBaseUrl("https://flutter-midtrans.herokuapp.com/index.php/") //Isi dengan file PHP (fork di git) dan telah di hosting di web. Cantumkan URL disini
+            .setMerchantBaseUrl(BuildConfig.BASE_URL) //Isi dengan file PHP (fork di git) dan telah di hosting di web. Cantumkan URL disini
             .enableLog(true)
             .setColorTheme(CustomColorTheme("#FFE51255", "#B61548", "#FFE51255"))
             .setLanguage("id")
