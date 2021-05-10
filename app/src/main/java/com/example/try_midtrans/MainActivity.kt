@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             .setTransactionFinishedCallback(TransactionFinishedCallback {
                 //logic for transaction result
             })
-            .setMerchantBaseUrl("http://10.0.2.2/payment_gateway/payment.php/") //Isi dengan file PHP (fork di git) dan telah di hosting di web. Cantumkan URL disini
+            .setMerchantBaseUrl("https://flutter-midtrans.herokuapp.com/index.php/") //Isi dengan file PHP (fork di git) dan telah di hosting di web. Cantumkan URL disini
             .enableLog(true)
             .setColorTheme(CustomColorTheme("#FFE51255", "#B61548", "#FFE51255"))
             .setLanguage("id")
