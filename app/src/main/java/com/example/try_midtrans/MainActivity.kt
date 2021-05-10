@@ -40,11 +40,12 @@ class MainActivity : AppCompatActivity() {
             val total = harga.toDouble() * quantity.toDouble()
             val catatan = catatan.text.toString()
             //Create Transaction Request
-            val transactionRequest = TransactionRequest("Diky-Store"+System.currentTimeMillis().toShort()+"",total)
+            val transactionRequest = TransactionRequest("Diky-Store"+System.currentTimeMillis().toString()+"",total)
             //Create Item Detail's
             val item = ItemDetails("NamaItemId",harga.toDouble(),quantity.toInt(),"KOTLIN")
             val itemDetails = ArrayList<ItemDetails>()
             itemDetails.add(item)
+            transactionRequest.itemDetails = itemDetails
             //Create Customer Detail Object
             uiKitsDetails(transactionRequest)
             MidtransSDK.getInstance().transactionRequest = transactionRequest

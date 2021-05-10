@@ -19,6 +19,7 @@ android {
 
     productFlavors {
         sandbox{
+            dimension "mode"
             buildConfigField "String", "BASE_URL", "\"https://flutter-midtrans.herokuapp.com/index.php/\""
             buildConfigField "String", "CLIENT_KEY", "\"SB-Mid-client-njnJpVe5frGCthE0\""
         }
